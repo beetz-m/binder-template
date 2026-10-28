@@ -1,4 +1,4 @@
-# Wind turbine robotics labs: line simulation and replacement matrix
+# Wind turbine robotics labs: line simulation, replacement matrix, service mission
 
 [![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/beetz-m/binder-template/wind_line_sim_vrb_lab?urlpath=lab/tree/notebooks/line_simulation.ipynb)
 
@@ -14,6 +14,10 @@ A second notebook runs the twin's **replacement matrix**. It asks which of 20 se
 Visitors can change the hatch, the kit shaft, the payloads and the hoist capacity, and see how the nacelle's design
 decides whether robots can service it.
 
+A third notebook schedules the twin's **service mission M1**, a robot-only visit at a wind turbine. It shows which
+steps set the length of the visit, checks the plan against the twin's weather limits, and lets visitors drop the
+pump-motor exchange, keep a resident robot in the nacelle or slow the robots down.
+
 The twin is reconstructed from public and second-hand sources. It is not the real plant and uses no Siemens Energy
 data; station times are our own estimates. Siemens Energy does not run or endorse this lab.
 
@@ -23,6 +27,7 @@ data; station times are our own estimates. Siemens Energy does not run or endors
 |---|---|
 | [**Line simulation**](https://binder.intel4coro.de/v2/gh/beetz-m/binder-template/wind_line_sim_vrb_lab?urlpath=lab/tree/notebooks/line_simulation.ipynb) | `notebooks/line_simulation.ipynb` in JupyterLab |
 | [**Replacement matrix**](https://binder.intel4coro.de/v2/gh/beetz-m/binder-template/wind_line_sim_vrb_lab?urlpath=lab/tree/notebooks/replacement_matrix.ipynb) | `notebooks/replacement_matrix.ipynb` in JupyterLab |
+| [**Service mission**](https://binder.intel4coro.de/v2/gh/beetz-m/binder-template/wind_line_sim_vrb_lab?urlpath=lab/tree/notebooks/service_mission.ipynb) | `notebooks/service_mission.ipynb` in JupyterLab |
 | [**VSCode**](https://binder.intel4coro.de/v2/gh/beetz-m/binder-template/wind_line_sim_vrb_lab?urlpath=vscode) | the repository in VSCode |
 
 The first launch builds the image and can take a while; later launches are quick until the next push.
@@ -33,6 +38,7 @@ The first launch builds the image and can take a while; later launches are quick
   `/home/repo/CuxhavenSiteTwin`, pinned by `TWIN_COMMIT`.
 - `notebooks/line_simulation.ipynb`: the line model. Runs in about 15 s.
 - `notebooks/replacement_matrix.ipynb`: the replacement matrix. Runs in about 1 s.
+- `notebooks/service_mission.ipynb`: the service-mission planner. Runs in a few seconds.
 - `requirements.txt`: numpy, matplotlib, ipywidgets.
 
 Run it locally without Docker: clone the twin next to this repository as `CuxhavenSiteTwin/` (it is git-ignored),
