@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cramera-proxy"
+version = "0.1.0"
+description = "Registers the static cramera viewer (CuxhavenSiteTwin scenes) with jupyter-server-proxy"
+dependencies = ["jupyter-server-proxy"]
+
+[project.entry-points.jupyter_serverproxy_servers]
+cramera = "cramera_proxy:setup_cramera"
