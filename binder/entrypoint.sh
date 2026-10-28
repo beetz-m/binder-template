@@ -101,8 +101,6 @@ start_rviz() {
 }
 
 log_startup_context "$@"
-update_cognitive_architecture
 import_workspace
-start_rviz
 
 exec "$@"
