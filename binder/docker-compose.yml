@@ -20,7 +20,6 @@ services:
       - AUTO_OPEN_DESKTOP=0
       - AUTO_OPEN_DESKTOP_ANCHOR=split-right
       - RVIZ_DISPLAY=:1
-      - RVIZ_CONFIG_FILE=/home/jovyan/.rviz2/default.rviz
       - LIBGL_ALWAYS_SOFTWARE=1
       - QT_X11_NO_MITSHM=1
       - DISPLAY=${DISPLAY}  # Use host display for GUI apps
